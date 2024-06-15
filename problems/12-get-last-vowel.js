@@ -6,7 +6,22 @@ contain a vowel, return null.
 Vowels are the letters "a", "e", "i", "o", "u".
 */
 
-// Your code here 
+function getLastVowel(str){
+    for(let i = str.length - 1; i >= 0; i--){
+        if (str[i] === 'a'){
+            return 'a';
+        } else if (str[i] === 'e'){
+            return 'e';
+        } else if (str[i] === 'i'){
+            return 'i';
+        } else if (str[i] === 'o'){
+            return 'o';
+        } else if (str[i] === 'u'){
+            return 'u';
+        }
+    } return null;
+}
+
 
 // console.log(getLastVowel('battery'));      // 'e'
 // console.log(getLastVowel('tunnel'));       // 'e'

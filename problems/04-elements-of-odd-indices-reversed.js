@@ -5,7 +5,12 @@ string in reverse order.
 */
 
 function elementsOfOddIndicesReversed(str) {
-  // Your code here 
+  let oddEle = '';
+  for(let i = str.length - 1; i >= 0; i--){
+    if(i % 2 !== 0){
+      oddEle = oddEle + str[i];
+    }
+  } return oddEle;
 }
 
 // console.log(elementsOfOddIndicesReversed('academy')); // 'mdc'

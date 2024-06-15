@@ -4,9 +4,13 @@ parameter. The function should return a new string containing only the first
 half of characters in the string parameter.
 */
 
-function firstHalf(str) {
-  // Your code here 
-}
+ function firstHalf(str) {
+   let newStr = '';
+   for(let i = 0; i < Math.round(str.length / 2); i++){
+     newStr = newStr + str[i]
+     console.log(newStr);
+   } return newStr;
+ }
 
 // console.log(firstHalf('academy')); // 'acad'
 // console.log(firstHalf('planet'));  // 'pla'

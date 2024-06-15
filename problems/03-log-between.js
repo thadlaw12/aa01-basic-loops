@@ -6,7 +6,11 @@ high number, inclusive. Inclusive means that the range includes the low and
 high numbers.
 */
 
-// Your code here 
+function logBetween(low, high){
+    for(let i = low; i <= high; i++){
+        console.log(i);
+    }
+}
 
 // logBetween(-1, 2);
 /* prints out:
