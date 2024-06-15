@@ -6,7 +6,18 @@ should return a new word where every vowel of the original word is followed by
 Vowels are the letters "a", "e", "i", "o", "u".
 */
 
-// Your code here 
+function sillyString(str){
+    let vowels = 'aeiou'
+    let newStr = ''
+    for(let i = 0; i < str.length; i++){
+        let char = str[i].toLowerCase()
+        if(!vowels.includes(char)){
+            newStr += str[i]
+        } else {
+            newStr += str[i] + 'b' + str[i]
+        }
+    } return newStr;
+}
 
 // console.log(sillyString('stop'));       // stobop
 // console.log(sillyString('that'));       // thabat

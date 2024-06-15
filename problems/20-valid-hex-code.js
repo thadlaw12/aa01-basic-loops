@@ -7,7 +7,24 @@ Each character must be a digit from 0-9 or an alphabetic character from A-F.
 All alphabetic characters may be uppercase or lowercase.
 */
 
-// Your code here 
+function validHexCode(str){
+  if(str[0] === '#'){
+    str = str.slice(1);
+    if(str.length === 6){
+      let hexChar = '0123456789abcdef'
+      for(let i = 0; i < str.length; i++){
+        let char = str[i].toLowerCase()
+        if(!hexChar.includes(char)){
+          return false;
+        }
+      } return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+}
 
 // console.log(validHexCode("#123456"));  // true
 // console.log(validHexCode("!123456"));  // false

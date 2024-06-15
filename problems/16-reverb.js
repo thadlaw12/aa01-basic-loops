@@ -7,7 +7,18 @@ not a string, say someone passes in a number as an argument, then return null.
 Vowels are the letters "a", "e", "i", "o", "u".
 */
 
-// Your code here 
+function reverb(word){
+    let newWord ='';
+    let vowels = 'aeiouAEIOU'
+    if(typeof word !== 'string'){
+        return null;
+    } for(let i = word.length - 1; i >= 0; i--){
+        if(vowels.includes(word[i])){
+            newWord = word + word.slice(i)
+            return newWord;
+        }
+    } return word;
+}
 
 // console.log(reverb('running')); // runninging
 // console.log(reverb('FAMILY'));  // FAMILYILY

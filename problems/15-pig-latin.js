@@ -17,7 +17,16 @@ So the two rules for our version of Pig Latin are:
 */
 
 function pigLatinWord(word) {
-    // Your code here 
+    let vowels = 'aeiouAEIOU';
+    if(vowels.includes(word[0])){
+        return `${word}yay`;
+    } else {
+        for(let i = 0; i < word.length; i++){
+            if(vowels.includes(word[i])){
+                return word.slice(i) + word.slice(0, i) + 'ay'
+            }
+        }
+    }
 };
 
 // console.log(pigLatinWord("apple")); //=> "appleyay"
